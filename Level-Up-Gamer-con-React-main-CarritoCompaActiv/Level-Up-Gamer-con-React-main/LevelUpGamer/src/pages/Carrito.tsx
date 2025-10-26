@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-// Importamos el tipo CartItem directamente de App.tsx (ruta correcta: ../App)
 import type { CartItem } from '../App'; 
 
 interface CarritoProps {
@@ -11,16 +10,14 @@ interface CarritoProps {
   removeFromCart: (productId: number) => void;
 }
 
-// Función para formatear el precio: $123.456
+
 const formatPrice = (price: number) => {
     return price.toLocaleString('es-CL', { minimumFractionDigits: 0 });
 };
 
 export const Carrito: React.FC<CarritoProps> = ({ cartItems, updateQuantity, removeFromCart }) => {
   
-  // ----------------------------------------------------
-  // CÁLCULOS AUTOMÁTICOS DEL SUBTOTAL Y TOTAL
-  // ----------------------------------------------------
+
   const subtotal = cartItems.reduce(
     (acc, item) => acc + item.price * item.quantity,
     0
@@ -29,7 +26,7 @@ export const Carrito: React.FC<CarritoProps> = ({ cartItems, updateQuantity, rem
   const tax = subtotal * taxRate;
   const total = subtotal + tax;
 
-  // ----------------------------------------------------
+  
 
   if (cartItems.length === 0) {
     return (
@@ -70,7 +67,7 @@ export const Carrito: React.FC<CarritoProps> = ({ cartItems, updateQuantity, rem
                   </td>
                   <td>${formatPrice(item.price)}</td>
                   <td>
-                    {/* --- BOTONES SUMAR Y RESTAR CON UPDATEQUANTITY --- */}
+                    {}
                     <div className="quantity-controls mx-auto input-group input-group-sm">
                       <button 
                         onClick={() => updateQuantity(item.id, -1)} 
@@ -105,7 +102,7 @@ export const Carrito: React.FC<CarritoProps> = ({ cartItems, updateQuantity, rem
           </table>
         </div>
   
-        {/* --- RESUMEN DE TOTALES --- */}
+        {}
         <div className="d-flex flex-column flex-md-row justify-content-end align-items-end mt-4">
           <div className='total-summary p-3 rounded-3 bg-black-transparent'>
             <div className="d-flex justify-content-between mb-2">
