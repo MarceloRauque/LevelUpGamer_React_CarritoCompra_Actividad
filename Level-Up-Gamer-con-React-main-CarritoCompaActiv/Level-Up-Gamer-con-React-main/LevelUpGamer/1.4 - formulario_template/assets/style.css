@@ -1,0 +1,115 @@
+/* === FUENTES Y COLORES === */
+body {
+  background-color: rgba(0, 0, 0, 0.9); /* 90% opaco */
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  background-attachment: fixed;
+  background-image: url('img/fondo3.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+/*  */
+.bg-black-transparent {
+  background-color: rgba(0, 0, 0, 0.8); /* 90% opaco */
+}
+
+.bg-dark-transparent {
+  background-color: rgba(33, 37, 41, 0.95); /* 85% opaco */
+}
+/*  */
+a {
+  text-decoration: none;
+}
+
+.text-verde {
+  color: #39FF14 !important;
+}
+
+.text-shadow {
+  text-shadow: 0 0 10px #1E90FF;
+}
+
+.orbitron {
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* === NAVBAR ESTILOS PERSONALIZADOS === */
+.nav-link:hover {
+  color: #39FF14 !important;
+  text-shadow: 0 0 8px #39FF14;
+}
+
+/* === IMÁGENES DEL CARRUSEL === */
+.carousel-item img {
+  max-height: 350px;
+  height: 350px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px #1E90FF);
+}
+
+/* === TARJETAS DE PRODUCTOS === */
+.card {
+  background: #1A1A1A;
+  border: none;
+  border-radius: 15px;
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px rgba(57,255,20,0.4);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: 18px;
+  background: linear-gradient(270deg, #041801, #1E90FF, #FF00FF, #041801);
+  background-size: 600% 600%;
+  z-index: -1;
+  filter: blur(15px);
+  animation: neonGlow 8s ease infinite;
+}
+
+/* === FORMULARIO DE CONTACTO === */
+.card-2 {
+  background: #1A1A1A;
+  border: none;
+  border-radius: 15px;
+}
+
+/* === NOTICIAS (hover personalizado) === */
+.noticia-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px #1E90FF !important;
+  transition: all 0.3s ease;
+}
+
+/* === ANIMACIÓN NEÓN === */
+@keyframes neonGlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.bg-azul {
+  /* Degradado radial desde un azul profundo en los bordes a un azul oscuro en el centro */
+  background: radial-gradient(circle at center,
+              #001f3f 0%,
+              #001533 60%,
+              #000a1f 100%);
+  min-height: 100vh;     /* Que cubra toda la altura */
+  background-attachment: fixed; /* Efecto fijo al hacer scroll */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card img{
+  max-height: 200px;
+  max-width: 370px;
+}

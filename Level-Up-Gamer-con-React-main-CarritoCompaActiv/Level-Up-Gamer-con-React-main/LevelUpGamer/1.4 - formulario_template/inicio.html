@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LEVEL-UP GAMER</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class=" text-white">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top shadow">
+    <div class="container">
+      <a class="navbar-brand fw-bold orbitron text-verde" href="#inicio">LEVEL-UP GAMER</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#carusel">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#blog">Noticias</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.html">Iniciar Sesion</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="carrito.html" title="Carrito de compras">🛒</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <header class="py-2 text-center bg-dark">
+    <div class="container">
+      <h1 class="display-4 text-verde orbitron">LEVEL-UP GAMER</h1>
+      <p class="lead text-info">Bienvenido al Mundo Gamer 🎮</p>
+    </div>
+  </header>
+
+  <!-- CAROUSEL -->
+  <section class="bg-black-transparent">
+    <div id="carusel" class="container py-5">
+      <div id="carouselProductos" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner text-center">
+          <div class="carousel-item active">
+            <img src="assets/img/ps5.png" class="d-block mx-auto img-fluid py-1" alt="PS5">
+            <p class="mt-3 text-secondary">PlayStation 5 – ¡Gráficos de otra dimensión! ⚡</p>
+          </div>
+          <div class="carousel-item">
+            <img src="assets/img/PC Gamer ASUS ROG Strix.png" class="d-block mx-auto img-fluid py-1" alt="PC Gamer">
+            <p class="mt-3 text-secondary">PC Gamer ASUS ROG Strix – Rendimiento extremo 🚀</p>
+          </div>
+          <div class="carousel-item">
+            <img src="assets/img/gamer.png" class="d-block mx-auto img-fluid py-1" alt="Auriculares">
+            <p class="mt-3 text-secondary">Auriculares HyperX Cloud II – Audio envolvente 🎧</p>
+          </div>
+          <div class="carousel-item">
+            <img src="assets/img/Puente-alto.png" class="d-block mx-auto img-fluid py-1" alt="Auriculares">
+            <p class="mt-3 text-secondary">Descuento 20% por tener correo instucional Duoc UC</p>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselProductos" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselProductos" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTOS -->
+  <section id="productos" class="py-5 bg-dark-transparent">
+    <div class="container">
+      <h2 class="text-center text-info mb-4">Nuestros Productos</h2>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-4">
+          <a href="producto.html" class="text-decoration-none">
+            <div class="card p-4 h-100 text-center">
+              <h3 class="text-verde">PlayStation 5</h3>
+              <p class="text-secondary">Consola de última generación con SSD ultrarrápido.</p>
+              <button class="btn btn-success">Ver detalle</button>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="producto2.html" class="text-decoration-none">
+            <div class="card p-4 h-100 text-center">
+              <h3 class="text-verde">PC Gamer ASUS ROG Strix</h3>
+              <p class="text-secondary">PC de última generación.</p>
+              <button class="btn btn-success">Ver detalle</button>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="producto3.html" class="text-decoration-none">
+            <div class="card p-4 h-100 text-center">
+              <h3 class="text-verde">Silla Gamer Secretlab Titan</h3>
+              <p class="text-secondary">Comodidad de última generación.</p>
+              <button class="btn btn-success">Ver detalle</button>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href=""  class="text-decoration-none">
+            <div class="card p-4 h-100 text-center " onclick="return false;">
+              <h3 class="text-verde">Catan</h3>
+              <p class="text-secondary">Un clásico juego de estrategia donde los jugadores compiten por colonizar y 
+                                          expandirse en la isla de Catan.</p>
+              <button class="btn btn-success">Ver detalle</button>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="#" class="text-decoration-none" >
+            <div class="card p-4 h-100 text-center" onclick="return false;">
+              <h3 class="text-verde">Carcassonne</h3>
+              <p class="text-secondary">Un juego de colocación de fichas donde los jugadores construyen el paisaje 
+                                        alrededor de la fortaleza medieval de Carcassonne.</p>
+              <button class="btn btn-success">Ver detalle</button>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="#" class="text-decoration-none">
+            <div class="card p-4 h-100 text-center" onclick="return false;">
+              <h3 class="text-verde">Controlador Inalámbrico Xbox Series X</h3>
+              <p class="text-secondary"> Ofrece una experiencia de juego cómoda con 
+                                        botones mapeables y una respuesta táctil mejorada.</p>
+              <button class="btn btn-success">Ver detalle</button>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="#" class="text-decoration-none">
+            <div class="card p-4 h-100 text-center" onclick="return false;">
+              <h3 class="text-verde">Auriculares Gamer HyperX Cloud II</h3>
+              <p class="text-secondary">Proporcionan un sonido envolvente de calidad con un 
+                                        micrófono desmontable y almohadillas.</p>
+              <button class="btn btn-success">Ver detalle</button>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="#" class="text-decoration-none">
+            <div class="card p-4 h-100 text-center" onclick="return false;">
+              <h3 class="text-verde">Mouse Gamer Logitech G502 HERO</h3>
+              <p class="text-secondary">Consola de última generación con SSD ultrarrápido.</p>
+              <button class="btn btn-success">Ver detalle</button>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="#" class="text-decoration-none">
+            <div class="card p-4 h-100 text-center" onclick="return false;">
+              <h3 class="text-verde">Polera Gamer Personalizada 'Level-Up'</h3>
+              <p class="text-secondary">Una camiseta cómoda y estilizada, con la posibilidad de personalizarla con tu gamer tag o diseño favorito. </p>
+              <button class="btn btn-success">Ver detalle</button>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="#" class="text-decoration-none">
+            <div class="card p-4 h-100 text-center" onclick="return false;">
+              <h3 class="text-verde">Mousepad Razer Goliathus Extended Chroma</h3>
+              <p class="text-secondary">Ofrece un área de juego amplia con iluminación RGB personalizable.</p>
+              <button class="btn btn-success">Ver detalle</button>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG  -->
+  <h2 class="text-center text-verde my-4 text-shadow orbitron">NOTICIAS IMPORTANTES</h2>
+
+  <section id="blog" class="container">
+    <div class="row justify-content-center g-4">
+      <div class="col-lg-10">
+        <div class="d-flex flex-column flex-md-row align-items-center gap-4 bg-dark rounded p-4 shadow noticia-hover">
+          <div class="flex-fill">
+            <h3 class="text-verde orbitron">LevelUpGamer inaugura su primera competencia online de eSports</h3>
+            <p class="text-light small">LevelUpGamer anunció con orgullo el lanzamiento de su primer torneo online, en el que jugadores de toda 
+              la región podrán enfrentarse en títulos como Valorant y League of Legends. La competencia ofrecerá premios sorpresa y lo más 
+              importante: la posibilidad de que los ganadores sean parte del equipo oficial de LevelUpGamer.
+              Según los organizadores, el objetivo es “dar visibilidad al talento local y fortalecer la comunidad gamer que hemos construido en estos meses”.
+            </p>
+          
+          </div>
+          <img src="assets/img/Esports.png" alt="Noticia 1" class="img-fluid rounded shadow-lg" style="max-width: 350px;">
+        </div>
+      </div>
+
+      <div class="col-lg-10">
+        <div class="d-flex flex-column flex-md-row align-items-center gap-4 bg-dark rounded p-4 shadow noticia-hover">
+          <div class="flex-fill">
+            <h3 class="text-verde orbitron">Nueva alianza: LevelUpGamer se une a desarrolladores indie</h3>
+            <p class="text-light small">En un esfuerzo por apoyar a los creadores independientes, LevelUpGamer anunció una alianza estratégica 
+              con estudios emergentes de videojuegos. Gracias a esta iniciativa, los usuarios podrán probar demos exclusivas de juegos indie directamente desde la plataforma.
+              “Queremos ser un puente entre los jugadores y los desarrolladores que están creando experiencias frescas y originales”, explicó el equipo en su comunicado.
+            </p>
+            
+          </div>
+          <img src="assets/img/juegos_indie.png" alt="Noticia 2" class="img-fluid rounded shadow-lg" style="max-width: 350px;">
+        </div>
+      </div>
+      <div class="col-lg-10">
+        <div class="d-flex flex-column flex-md-row align-items-center gap-4 bg-dark rounded p-4 shadow noticia-hover">
+          <div class="flex-fill">
+            <h3 class="text-verde orbitron">Nueva alianza: LevelUpGamer se une a desarrolladores indie</h3>
+            <p class="text-light small">En un esfuerzo por apoyar a los creadores independientes, LevelUpGamer anunció una alianza estratégica 
+              con estudios emergentes de videojuegos. Gracias a esta iniciativa, los usuarios podrán probar demos exclusivas de juegos indie directamente desde la plataforma.
+              “Queremos ser un puente entre los jugadores y los desarrolladores que están creando experiencias frescas y originales”, explicó el equipo en su comunicado.
+            </p>
+            
+          </div>
+          <img src="assets/img/juegos_indie.png" alt="Noticia 2" class="img-fluid rounded shadow-lg" style="max-width: 350px;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="py-5 bg-dark-transparent text-white mt-5">
+    <div class="container">
+      <h2 class="text-center mb-4 text-verde">Formulario de Contacto</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card-2 p-4">
+            <form>
+              <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" class="form-control bg-dark text-white border-0" placeholder="Ingresa tu nombre" required>
+              </div>
+              <div class="mb-3">
+                <label for="correo" class="form-label">Correo</label>
+                <input type="email" id="correo" name="correo" class="form-control bg-dark text-white border-0" placeholder="ejemplo@correo.com" required>
+              </div>
+              <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" class="form-control bg-dark text-white border-0" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-success w-100">Enviar Mensaje</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-3 bg-black-transparent text-center text-secondary">
+    <div class="container">
+      <div class="mb-2" onclick="return false;">
+        <a href="https://facebook.com" target="_blank" class="text-secondary mx-2" title="Facebook">
+          <i class="bi bi-facebook fs-4"></i>
+        </a>
+        <a href="https://twitter.com" target="_blank" class="text-secondary mx-2" title="Twitter/X">
+          <i class="bi bi-twitter-x fs-4"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" class="text-secondary mx-2" title="Instagram">
+          <i class="bi bi-instagram fs-4"></i>
+        </a>
+      </div>
+  
+      <p class="mb-0">© 2025 LEVEL-UP GAMER - Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,271 @@
+body {
+  background-color: rgba(0, 0, 0, 0.9); /* 90% opaco */
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  background-attachment: fixed;
+  background-image: url('assets/img/fondo3.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* */
+.bg-black-transparent {
+  background-color: rgba(0, 0, 0, 0.8); /* 90% opaco */
+}
+
+.bg-dark-transparent {
+  background-color: rgba(33, 37, 41, 0.95); /* 85% opaco */
+}
+/* */
+a {
+  text-decoration: none;
+}
+
+.text-verde {
+  color: #39FF14 !important;
+}
+
+.text-shadow {
+  text-shadow: 0 0 10px #1E90FF;
+}
+
+.orbitron {
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* === NAVBAR ESTILOS PERSONALIZADOS (Ajuste de Alineación) === */
+.nav-link:hover {
+  color: #39FF14 !important;
+  text-shadow: 0 0 8px #39FF14;
+}
+
+/* Nuevo: Alineación vertical para todos los ítems de la Navbar */
+.navbar-nav {
+    align-items: center; 
+}
+/* Nuevo: Espaciado para los enlaces */
+.nav-item .nav-link {
+    padding: 8px 10px; 
+}
+
+
+/* === IMÁGENES DEL CARRUSEL === */
+.carousel-item img {
+  max-height: 350px;
+  height: 350px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px #1E90FF);
+}
+
+/* === TARJETAS DE PRODUCTOS (Ajustes de Estilo) === */
+.card {
+  background: #1A1A1A;
+  border: none;
+  border-radius: 15px;
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px rgba(57,255,20,0.4);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: 18px;
+  background: linear-gradient(270deg, #041801, #1E90FF, #FF00FF, #041801);
+  background-size: 600% 600%;
+  z-index: -1;
+  filter: blur(15px);
+  animation: neonGlow 8s ease infinite;
+}
+
+/* Nuevo: Corrección de alineación del Card Footer y Badge */
+.card-body {
+    position: relative;
+    padding-top: 30px; /* Asegura espacio para el badge posicionado */
+}
+
+/* Nuevo: Posicionamiento del Badge */
+.card-body .badge {
+    position: absolute;
+    top: 10px; 
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    background-color: #1E90FF !important; 
+    color: white !important;
+    box-shadow: 0 0 8px rgba(30, 144, 255, 0.6);
+}
+
+/* Nuevo: Estilo del Precio en el Footer */
+.card-footer .fw-bold {
+    font-size: 1.2em;
+    color: #39FF14 !important; 
+    text-shadow: 0 0 5px rgba(57, 255, 20, 0.5);
+}
+
+/* === FORMULARIO DE CONTACTO === */
+.card-2 {
+  background: #1A1A1A;
+  border: none;
+  border-radius: 15px;
+}
+
+/* === NOTICIAS (hover personalizado) === */
+.noticia-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px #1E90FF !important;
+  transition: all 0.3s ease;
+}
+
+/* === ANIMACIÓN NEÓN === */
+@keyframes neonGlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.bg-azul {
+  /* Degradado radial desde un azul profundo en los bordes a un azul oscuro en el centro */
+  background: radial-gradient(circle at center,
+               #001f3f 0%,
+               #001533 60%,
+               #000a1f 100%);
+  min-height: 100vh; 
+  background-attachment: fixed; 
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* ------------------------------------------------------------------ */
+/* --- ESTILOS PARA EL CARRITO (AÑADIDOS) --- */
+/* ------------------------------------------------------------------ */
+
+/* --- Estilos para la Navbar (Contador de Carrito) --- */
+.navbar-cart-item {
+    position: relative; 
+}
+
+.cart-link {
+    position: relative;
+    padding-right: 25px !important; 
+}
+
+.cart-link:hover {
+    color: #39FF14 !important; 
+    text-shadow: 0 0 10px #39FF14; 
+}
+
+.cart-count {
+    position: absolute;
+    top: 5px; 
+    right: 0; 
+    
+    background-color: #39FF14; 
+    color: #000; 
+    font-weight: bold;
+    border: 1px solid #000;
+    
+    border-radius: 50%;
+    padding: 1px 6px;
+    font-size: 11px;
+    line-height: 1.2;
+    min-width: 18px;
+    text-align: center;
+    box-shadow: 0 0 8px rgba(57, 255, 20, 0.8);
+    
+    transform: translate(50%, 0); 
+    z-index: 10;
+}
+
+
+/* --- Estilos generales del Carrito --- */
+
+.carrito-table {
+    border: 1px solid #1E90FF30 !important;
+}
+
+.carrito-thumb-img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 3px #1E90FF);
+}
+
+.item-subtotal {
+    color: #39FF14 !important; 
+}
+
+/* === Botones Sumar/Restar (Cantidad) === */
+.quantity-controls {
+    max-width: 100px; 
+}
+
+.quantity-btn.btn-outline-primary {
+    background-color: #002b4d; 
+    color: #1E90FF; 
+    border-color: #1E90FF;
+    font-weight: bold;
+}
+
+.quantity-btn.btn-outline-primary:hover {
+    background-color: #004080; 
+    color: #fff;
+    box-shadow: 0 0 8px #1E90FF;
+    border-color: #1E90FF;
+}
+
+.quantity-display {
+    background-color: #000; 
+    color: #fff;
+    font-weight: bold;
+    border-top: 1px solid #1E90FF !important;
+    border-bottom: 1px solid #1E90FF !important;
+    border-right: none !important;
+    border-left: none !important;
+}
+
+.remove-btn.btn-outline-danger {
+    color: #ff4500;
+    border-color: #ff4500;
+}
+.remove-btn.btn-outline-danger:hover {
+    background-color: #ff4500;
+    color: #fff;
+}
+
+
+/* --- Resumen de Totales --- */
+.total-summary {
+    width: 100%;
+    max-width: 350px;
+    border: 1px solid #39FF1480; 
+    box-shadow: 0 0 10px #39FF1440;
+}
+
+.total-line h4 {
+    color: #39FF14;
+    text-shadow: 0 0 5px rgba(57, 255, 20, 0.5);
+}
+
+/* === Botón Principal (Finalizar Compra / Añadir al Carrito) === */
+.checkout-btn {
+    background: linear-gradient(90deg, #1E90FF 0%, #39FF14 100%); 
+    color: black !important; 
+    font-weight: bold;
+    border: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 0 15px rgba(57, 255, 20, 0.6);
+}
+
+.checkout-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px rgba(57, 255, 20, 0.9), 0 0 5px #1E90FF;
+}

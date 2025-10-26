@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Carrito de Compras - LEVEL-UP GAMER</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body class="text-white">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top shadow">
+    <div class="container">
+      <a class="navbar-brand fw-bold orbitron text-verde" href="index.html">LEVEL-UP GAMER</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html#carusel">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#productos">Productos</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#blog">Noticias</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#contacto">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.html">Iniciar Sesión</a></li>
+          <li class="nav-item"><a class="nav-link active" href="carrito.html" title="Carrito de compras">🛒</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- SECCIÓN CARRITO -->
+  <section class="bg-azul text-light py-5">
+    <div class="container bg-dark-transparent p-4 rounded shadow-lg">
+      <h2 class="text-center text-verde orbitron text-shadow mb-4">🛒 Tu Carrito de Compras</h2>
+
+      <div class="table-responsive">
+        <table class="table table-dark table-hover align-middle text-center">
+          <thead>
+            <tr class="text-verde">
+              <th>Producto</th>
+              <th>Precio</th>
+              <th>Cantidad</th>
+              <th>Subtotal</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="tabla-carrito">
+            <!-- Productos generados dinámicamente -->
+          </tbody>
+        </table>
+      </div>
+
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mt-4">
+        <h4 id="total" class="text-verde orbitron text-shadow mb-3 mb-md-0">Total: $0</h4>
+        <div class="d-flex gap-2">
+          <button id="vaciar" class="btn btn-outline-danger">Vaciar Carrito</button>
+          <button class="btn btn-outline-success">Finalizar Compra</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-3 bg-black-transparent text-center text-secondary">
+    <div class="container">
+      <p class="mb-0">© 2025 LEVEL-UP GAMER - Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- SCRIPT DEL CARRITO -->
+  <script>
+    const productos = [
+      { id: 1, nombre: "PS5", precio: 49990, cantidad: 1 },
+      { id: 2, nombre: "Teclado Mecánico Inferno V2", precio: 69990, cantidad: 1 },
+      { id: 3, nombre: "Monitor 27'' Quantum HDR", precio: 249990, cantidad: 1 },
+      { id: 4, nombre: "Mouse Gamer TitanPro 16000DPI", precio: 39990, cantidad: 1 },
+      { id: 5, nombre: "Silla Gamer DragonFire", precio: 189990, cantidad: 1 },
+      { id: 6, nombre: "PC Gamer Thunder ROG", precio: 1299990, cantidad: 1 },
+      { id: 7, nombre: "PlayStation 5 Slim", precio: 549990, cantidad: 1 },
+      { id: 8, nombre: "Control Inalámbrico Nebula", precio: 69990, cantidad: 1 },
+      { id: 9, nombre: "Mousepad RGB Nebula XL", precio: 24990, cantidad: 1 },
+      { id: 10, nombre: "Lámpara Gamer LED Pixel", precio: 15990, cantidad: 1 },
+    ];
+
+    const tabla = document.getElementById("tabla-carrito");
+    const totalHTML = document.getElementById("total");
+    const btnVaciar = document.getElementById("vaciar");
+
+    function renderCarrito() {
+      tabla.innerHTML = "";
+      let total = 0;
+
+      productos.forEach(p => {
+        const subtotal = p.precio * p.cantidad;
+        total += subtotal;
+
+        const fila = `
+          <tr>
+            <td>${p.nombre}</td>
+            <td>$${p.precio.toLocaleString()}</td>
+            <td>
+              <div class="d-flex justify-content-center align-items-center gap-2">
+                <button class="btn btn-sm btn-outline-light" onclick="disminuir(${p.id})">−</button>
+                <span>${p.cantidad}</span>
+                <button class="btn btn-sm btn-outline-light" onclick="aumentar(${p.id})">+</button>
+              </div>
+            </td>
+            <td>$${subtotal.toLocaleString()}</td>
+            <td>
+              <button class="btn btn-sm btn-outline-danger" onclick="eliminar(${p.id})">
+                <i class="bi bi-trash3"></i>
+              </button>
+            </td>
+          </tr>
+        `;
+        tabla.insertAdjacentHTML("beforeend", fila);
+      });
+
+      totalHTML.textContent = `Total: $${total.toLocaleString()}`;
+    }
+
+    function aumentar(id) {
+      const prod = productos.find(p => p.id === id);
+      if (prod) prod.cantidad++;
+      renderCarrito();
+    }
+
+    function disminuir(id) {
+      const prod = productos.find(p => p.id === id);
+      if (prod && prod.cantidad > 1) prod.cantidad--;
+      renderCarrito();
+    }
+
+    function eliminar(id) {
+      const index = productos.findIndex(p => p.id === id);
+      if (index > -1) productos.splice(index, 1);
+      renderCarrito();
+    }
+
+    btnVaciar.addEventListener("click", () => {
+      productos.length = 0;
+      renderCarrito();
+    });
+
+    renderCarrito();
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
